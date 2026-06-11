@@ -1,6 +1,5 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { InterviewState, InterviewAction } from '../types/interview';
+import type { InterviewState, InterviewAction } from '../types/interview';
 import { Award, RefreshCcw, CheckCircle } from 'lucide-react';
 
 interface ResultPageProps {

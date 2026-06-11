@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { AnthropicResponse, MessageHistory } from '../types/interview';
+import type { AnthropicResponse, MessageHistory } from '../types/interview';
 
 const SYSTEM_PROMPT = `You are an experienced technical interviewer. Your job is to conduct a realistic job interview.
 

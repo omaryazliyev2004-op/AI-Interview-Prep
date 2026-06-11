@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { InterviewPage } from './pages/InterviewPage';

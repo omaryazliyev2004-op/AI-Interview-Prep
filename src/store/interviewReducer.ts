@@ -1,4 +1,4 @@
-import { InterviewState, InterviewAction } from '../types/interview';
+import type { InterviewState, InterviewAction } from '../types/interview';
 
 export const initialState: InterviewState = {
   role: '',

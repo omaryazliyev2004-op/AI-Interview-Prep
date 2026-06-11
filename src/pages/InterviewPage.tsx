@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { InterviewState, InterviewAction } from '../types/interview';
+import type { InterviewState, InterviewAction } from '../types/interview';
 import { ProgressBar } from '../components/ProgressBar';
 import { EvaluationCard } from '../components/EvaluationCard';
 import { claudeService } from '../services/claudeService';
@@ -144,13 +144,12 @@ export function InterviewPage({ state, dispatch }: InterviewPageProps) {
               onChange={(e) => setAnswer(e.target.value)}
               placeholder="Type your answer here..."
               className="w-full h-48 bg-slate-800/50 border border-slate-700 rounded-2xl p-6 text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none shadow-inner"
-              disabled={state.status === 'evaluating'}
             />
           </div>
           <div className="flex justify-end">
             <button 
               type="submit" 
-              disabled={!answer.trim() || state.status === 'evaluating'}
+              disabled={!answer.trim()}
               className="btn-primary flex items-center gap-2"
             >
               <Send className="w-5 h-5" />
